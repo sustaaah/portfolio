@@ -354,7 +354,35 @@ body {
 		}
 	}
 
+	.halfText-sxTop-container{
+		left: -3.47222vw;
+		top: 10.66667vh;
+		position: absolute;
+		overflow: hidden;
+		writing-mode: tb-rl;
 
+		.halfText-sxTop{
+			overflow: hidden;
+			font-size: 6.09722vw;
+			line-height: 7.63889vw;
+			font-weight: 500;
+			letter-spacing: -.02em;
+		}
+	}
 
+	.centerName-container{
+		height: 100%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+
+		.centerName{
+			font-size: 6.09722vw;
+			line-height: 7vw;
+			font-weight: 500;
+			letter-spacing: -.02em;
+			text-shadow: none;
+		}
+	}
 
 }
