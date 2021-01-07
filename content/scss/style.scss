@@ -264,7 +264,21 @@ body {
 			line-height: 7vw;
 			font-weight: 500;
 			letter-spacing: -.02em;
-			text-shadow: none;
+
+			@media only screen and (max-width: 600px){
+				color: #000000;
+			}
+
+			@media only screen and (min-width: 600px){
+				@supports (-webkit-text-stroke-width: 2px) and (-webkit-text-stroke-color: #ff0000){
+					color: transparent;
+					-webkit-text-stroke-width: 2px;
+					-webkit-text-stroke-color: #ff0000;
+				}
+			}
+			
+
+			
 		}
 
 	}
@@ -274,7 +288,7 @@ body {
 			position: relative;
 			float: left;
 			display: block;
-			color: inherit;
+	
 			text-decoration: none;
 			margin: 0;
 			padding: 0;
@@ -325,64 +339,4 @@ body {
 			}
 		}
 	}
-}
-
-.v2{
-	*{
-		font-family: 'eesti';
-	}
-
-	background-image: radial-gradient(circle, #ddd 1px, rgba(0,0,0,0) 1px);
-	background-size: 1rem 1rem;
-
-	height: 100vh;
-	width: 100%;
-	overflow: hidden;
-	
-	//top text (fuck this shit)
-	.halfText-topDx-container{
-		top: -3.47222vw;		
-		right: 10.66667vw;
-		position: absolute;
-		overflow: hidden;
-
-		.halfText-topDx{
-			font-size: 6.09722vw;
-			line-height: 7.63889vw;
-			font-weight: 500;
-			letter-spacing: -.02em;
-		}
-	}
-
-	.halfText-sxTop-container{
-		left: -3.47222vw;
-		top: 10.66667vh;
-		position: absolute;
-		overflow: hidden;
-		writing-mode: tb-rl;
-
-		.halfText-sxTop{
-			overflow: hidden;
-			font-size: 6.09722vw;
-			line-height: 7.63889vw;
-			font-weight: 500;
-			letter-spacing: -.02em;
-		}
-	}
-
-	.centerName-container{
-		height: 100%;
-		display:flex;
-		justify-content:center;
-		align-items:center;
-
-		.centerName{
-			font-size: 6.09722vw;
-			line-height: 7vw;
-			font-weight: 500;
-			letter-spacing: -.02em;
-			text-shadow: none;
-		}
-	}
-
 }
