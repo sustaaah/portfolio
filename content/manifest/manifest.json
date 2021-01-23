@@ -1,8 +1,8 @@
 {
-  "name": "Donate App",
-  "description": "This app helps you donate to worthy causes.",
+  "name": " https://sustaaah.com",
+  "description": "Passatempo pomposo del vescovo",
   "icons": [{
-    "src": "https://sustaaah.com/content/manifest/manifest.json",
+	"src": "https://sustaaah.com/content/image/slashRedback.jpg",
     "sizes": "192x192"
   }]
 }
