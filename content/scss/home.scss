@@ -1,5 +1,9 @@
 @import 'preset.scss';
 
+html, body{
+	background-color: #f5efe1;
+}
+
 *{
 	cursor: url('../cursor/cursor-salt.cur'), default;
 }
@@ -13,12 +17,13 @@
 	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
-
 .loader-container{
 	color: #f5efe1;
 	background: #0b0b0b;
 	height: 100vh;
 	width: 100%;
+	opacity: 1;
+	z-index: 10;
 
 	div#pycon{
 		position: absolute;
@@ -29,7 +34,6 @@
 
 		span#p01{
 			font-size: 7.09722vw;
-
 		}
 	}
 
@@ -51,8 +55,99 @@
 		}
 	}
 
+	.link-container{
+		display:flex;
+	
+		.link{
+			position: relative;
+			float: left;
+			display: block;
+
+			text-decoration: none;
+			margin: 0;
+			padding: 0;
+			border: 0;
+
+			.link-underline{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				overflow: hidden;
+				pointer-events: none;
+				transform: translateZ(0);
+			}
+
+			.link-underline::before{
+				transition: transform .8s cubic-bezier(.65,.05,.36,1) .2s;
+			}
+
+			.link-underline::after{
+				transform: translateX(-102%);
+				transition: transform .8s cubic-bezier(.65,.05,.36,1);
+			}
+
+			.link-underline::before, .link-underline::after{
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				border-bottom: 2px solid #f5efe1;
+			}
+		}
+
+		//when mouse hover
+		.linkHover{
+			.link-underline::before{
+				transform: translateX(102%);
+				transition: transform .8s cubic-bezier(.65,.05,.36,1);
+			}
+
+			.link-underline::after{
+				transform: translateX(0);
+				transition: transform .8s cubic-bezier(.65,.05,.36,1) .2s;
+				}
+		}
+	}
+}
+
+.loaderExpire{
+	opacity: 0;
+	transition-delay: 2s;
+	transition: opacity 1s ease-in-out;
+}
+
+.app{
+	z-index: 1;
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
+
+
+
+
+
+
+
+
 
 
 
