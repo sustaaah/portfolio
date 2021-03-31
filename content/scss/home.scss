@@ -122,8 +122,16 @@ html, body{
 }
 
 .app{
-	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
 	
+	
+	
+	z-index: 1;
+	cursor: url('../cursor/cursor-black.cur'), default;
 
 
 
