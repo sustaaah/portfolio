@@ -13,10 +13,8 @@ function expireLoader(){
 	var app = document.getElementById('app')
 	app.style.display = "block";
 
-
+	setTimeout(function (){loaderContainer.style.display = "none";}, 1005)
 
 	// TODO display none loader
-
-
-
+	//loaderContainer.style.display = "none";
 }
