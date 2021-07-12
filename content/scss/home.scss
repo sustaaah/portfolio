@@ -8,15 +8,6 @@ html, body{
 	cursor: url('../cursor/cursor-black.cur'), default;
 }
 
-.noselect {
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
-}
-
 .loader-container{
 	cursor: url('../cursor/cursor-salt.cur'), default;
 	position: fixed;;
@@ -148,14 +139,29 @@ html, body{
 	}
 
 	.clockContainer{
-		color: aqua;
+		text-align: unset;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+
 
 
 		.dot{
 			animation-name: "dotPulse";
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
 		}
 
+		@keyframes dotPulse {
+			0%    {opacity: 1;}
+			50%   {opacity: 0;}
+			100%  {opacity: 1;}
+		}
+	
+	
 	}
 
 
 }
+
