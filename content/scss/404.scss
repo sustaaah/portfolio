@@ -30,3 +30,19 @@ body{
 .text404{
 	font-weight: 400;
 }
+
+
+.msg-err{
+	border-bottom: 0.2vmax #dc3545 solid;
+	animation-name: underline-err;
+	animation-duration: .80s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(.46,.03,.52,.96);
+}
+
+/* The animation code */
+@keyframes underline-err {
+	0%{border-bottom-color: transparent}
+	50%{border-bottom-color: #dc3545}
+	100%{border-bottom-color: transparent}
+}
